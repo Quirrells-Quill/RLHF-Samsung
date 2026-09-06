@@ -5,7 +5,7 @@ import uuid
 import os
 from datetime import datetime, timezone
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/postgres")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 async def seed():
     conn = await asyncpg.connect(DATABASE_URL)
